@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="normalize.css" />
+    <script src="script.js" defer></script>
     <title>Document</title>
   </head>
   <body>
     <div class="form-container">
       <form action="" method="get" class="login-form">
-        <h1 class="title">Sign up</h1>
+        <h1 class="title">Sign up,</h1>
         <div class="login">Already a member? <a href="">Login</a></div>
         <div class="name-container">
           <div class="input-container">
@@ -21,7 +22,6 @@
               placeholder=" "
               required
             />
-            <div class="cut"></div>
             <label for="firstname" class="placeholder">First name*</label>
           </div>
           <div class="input-container">
@@ -32,7 +32,6 @@
               placeholder=" "
               required
             />
-            <div class="cut"></div>
             <label for="lastname" class="placeholder">Last name*</label>
           </div>
         </div>
@@ -44,13 +43,17 @@
             placeholder=" "
             required
           />
-          <div class="cut cut-short"></div>
           <label for="email" class="placeholder">Email*</label>
         </div>
         <div class="input-container">
-          <input type="tel" id="tel" class="input" placeholder=" " />
-          <div class="cut cut-long"></div>
-          <label for="tel" class="placeholder">Phone number</label>
+          <input
+            type="tel"
+            id="tel"
+            class="input"
+            placeholder=" "
+            pattern="[0-9]+-"
+          />
+          <label for="tel" class="placeholder">Phone (+46 1234 567 89)</label>
         </div>
         <div class="input-container">
           <input
@@ -60,11 +63,23 @@
             placeholder=" "
             required
           />
-          <div class="cut"></div>
+          <span id="pwdToggle">
+            <span class="fa fa-eye-slash"></span>
+          </span>
           <label for="pwd" class="placeholder">Password*</label>
         </div>
         <div class="input-container">
           <button type="submit" class="submit">Register</button>
+        </div>
+        <span class="divider">- or -</span>
+        <div class="alt-register">
+          <button>
+            <img src="images/google-icon-logo-svgrepo-com.svg" alt="" />
+            Register with google</button
+          ><button>
+            <img src="images/apple-black-logo-svgrepo-com.svg" alt="" />Register
+            with apple
+          </button>
         </div>
       </form>
     </div>
